@@ -1,0 +1,14 @@
+services:
+  mongo:
+    image: mongo:5
+    restart: always
+    ports:
+      - 27017:27017
+    env_file:
+      - .env
+    environment:
+      MONGODB_DATABASE: nest-pokemon
+      MONGO_INITDB_ROOT_USERNAME: $MONGO_INITDB_ROOT_USERNAME
+      MONGO_INITDB_ROOT_PASSWORD: $MONGO_INITDB_ROOT_PASSWORD
+    volumes:
+      - ./mongo:/data/db
