@@ -22,6 +22,7 @@ import { joiValidationSchema } from './config/joi.validation';
       dbName: process.env.MONGO_DB_NAME,
       user: process.env.MONGO_INITDB_ROOT_USERNAME,
       pass: process.env.MONGO_INITDB_ROOT_PASSWORD,
+      authSource: 'admin'
     }),
     PokemonModule,
     CommonModule,

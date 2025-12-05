@@ -1,0 +1,8 @@
+node_modules/
+mongo/
+dist/
+.vscode/
+test/
+.git/
+
+.gitignore
