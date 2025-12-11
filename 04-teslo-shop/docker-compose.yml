@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:15.1
+    restart: always
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    container_name: TesloDB
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
